@@ -11,11 +11,11 @@ export default function App() {
     fetchData(); // Chamada inicial para buscar a primeira piada
     const interval = setInterval(() => {
       fetchData(); // Busca uma nova piada a cada 10 segundos
-      setShowModal(true); // Exibe o modal
+      setShowModal(true);
       setCountdown(10); // Reseta a contagem regressiva
     }, 10000);
 
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+    return () => clearInterval(interval); 
   }, []);
 
   useEffect(() => {
